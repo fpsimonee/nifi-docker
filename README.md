@@ -93,3 +93,12 @@ The resulta like this:
 2. Now you can open your browse and go to http://localhost:8080/nifi/ and see your processor is ready to use: 
 
 ![Image of docker-build](./images/nifi-processor.png)  
+
+
+# To Use AWS Services 
+
+1. Copy file credentials-example in aws-credentials folder and create a credentials file for aws 
+2. Put your credentials in file and build a image to use aws Services on apache NIFI
+
+
+
