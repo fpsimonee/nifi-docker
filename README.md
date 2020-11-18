@@ -58,13 +58,38 @@ In this repository you find a simple Dockerfile based on **NIFI Image** and addi
 
    - Now your custom processor is built, and you able to create your custom docker Image. Run this code to build your image: 
     
-    sudo docker build -t nifitest .  (linux)
-
-    or 
-
-    docker build -t nifitest . (windows)
+    sudo docker build -t nifitest .
+    
+*obs: Depending on your system you need add sudo on beginning of this command to perform correctly*
 
    - In your terminal result is this: 
 
-   ![Image of docker-build]
-   (/images/docker-build.png)   
+   ![Image of docker-build](./images/docker-build.png)   
+
+
+# Run your Image 
+
+1. To run your image run this code: 
+
+```
+docker run -p 8080:8080 -d nifitest 
+```
+*obs: Depending on your system you need add sudo on beginning of this command to perform correctly*
+
+ - The result in your terminal is like this: 
+ 
+ ![Image of docker-build](./images/docker-run-result.png)
+
+ - To see if your container is Up you can run this:
+
+```
+docker ps -a 
+```
+*obs: Depending on your system you need add sudo on beginning of this command to perform correctly*
+
+The resulta like this: 
+![Image of docker-build](./images/docker-ps.png)
+
+2. Now you can open your browse and go to http://localhost:8080/nifi/ and see your processor is ready to use: 
+
+![Image of docker-build](./images/nifi-processor.png)  
